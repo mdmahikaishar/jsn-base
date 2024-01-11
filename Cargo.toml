@@ -1,0 +1,24 @@
+[package]
+name = "jsn-base"
+version = "0.1.0"
+edition = "2021"
+authors = ["mdmahikaishar <mahikaishar@gmail.com"]
+description = "A database, similar to `sqlite`. It supports reading and writing."
+repository = "https://github.com/mdmahikaishar/jsn-base"
+keywords = ["database", "orm", "sqlite", "reader", "writer"]
+categories = ["database", "orm"]
+license = "MIT"
+readme = "README.md"
+include = ["examples/**", "src/**", "README.md"]
+
+[lib]
+name = "jsn_base"
+path = "src/lib.rs"
+
+[dependencies]
+serde = { version = "1.0.193", features = ["derive"] }
+serde_json = "1.0.108"
+
+[[example]]
+name = "main"
+path = "examples/main.rs"
